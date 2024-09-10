@@ -1,9 +1,9 @@
 import { Image, Box, Checkbox, ScrollView, Text } from "native-base";
-import Logo from "../../assets/images/Logo.png";
+import Logo from "../../assets/Logo.png";
 import { Title } from "@/app/src/components/Title";
 import { InputText } from "@/app/src/components/InputText";
 import { useState } from "react";
-import { ButtonScreen } from "@/app/src/components/Button";
+import { ButtonScreen } from "../../components/ButtonScreen";
 import { sections } from "@/app/src/utils/InputRegisterText";
 
 export default function Register() {
