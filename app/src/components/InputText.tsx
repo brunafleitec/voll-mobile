@@ -4,10 +4,17 @@ interface InputProps {
   label?: string;
   placeholder: string;
   secureTextEntry?: boolean;
-  leftIcon?: React.ReactNode;
+  value?: string;
+  onChangeText?: (text: string) => void;
 }
 
-export function InputText({ label, placeholder, secureTextEntry = false }: InputProps) {
+export function InputText({
+  label,
+  placeholder,
+  secureTextEntry = false,
+  value,
+  onChangeText
+}: InputProps) {
   return (
     <FormControl mt={3}>
       { label && <FormControl.Label>{label}</FormControl.Label> }
@@ -19,6 +26,8 @@ export function InputText({ label, placeholder, secureTextEntry = false }: Input
         bgColor="gray.100"
         secureTextEntry={secureTextEntry}
         shadow={3}
+        value={value}
+        onChangeText={onChangeText}
       />
     </FormControl>
   );
